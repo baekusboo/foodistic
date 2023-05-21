@@ -43,12 +43,12 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
         </div>
         <div className="ings mt-10">
           <span className="ing-title text-3xl font-medium mb-5 inline-block">
-            Ingredients:
+            Ingredients Used:
           </span>
           <ul className="flex flex-col gap-2">
             {recipe?.ingredients?.map((ing, i) => (
               <li key={i}>
-                ✓ {ing.quantity}
+                👉 {ing.quantity}
                 {ing.unit} {ing.description}
               </li>
             ))}
@@ -61,7 +61,7 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
         </span>
         <h2 className="title text-5xl">{recipe?.title}</h2>
         <div className="servings-cooking-time flex gap-5 uppercase tracking-widest font-semibold text-rose-500">
-          <div className="servings">Servings: {recipe?.servings} people</div>
+          <div className="servings">Serves {recipe?.servings} people</div>
           <div className="cooking-time">
             Cooking time:{" "}
             {recipe?.cooking_time < 60
@@ -88,7 +88,7 @@ const RecipeItem = ({ favouriteHandler, savedItems }) => {
             rel="noreferrer"
             className="bg-gradient-to-br from-purple-400 to-purple-600 text-purple-50 p-3 px-8 rounded-lg text-sm uppercase font-medium tracking-wider mt-2 inline-block shadow-md shadow-purple-200 hover:shadow-lg hover:shadow-purple-300 duration-300"
           >
-            Get directions
+            View Recipe
           </a>
           <Link
             to="/"
